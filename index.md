@@ -11,7 +11,7 @@
 <center><img src="images/diagram.png" width="600"></center>
 <br> -->
 
-## Audio Samples
+## Results on the blind test set from the ICASSP 2021 AEC Challenge 
 
 <!-- <div style="text-align: justify"> This mixture audio clip is from 'Zeno - Signs' in MUSDB18 test partition: </div> 
 <p style="margin-bottom : 6px;">
