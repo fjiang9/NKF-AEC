@@ -1,37 +1,104 @@
-## Welcome to GitHub Pages
+# <center>Low-Complexity Acoustic Echo Cancellation with Neural Kalman Filtering</center>
 
-You can use the [editor on GitHub](https://github.com/fjiang9/NKF-AEC/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<center>Dong Yang$^*$, Fei Jiang$^*$, Wei Wu, Xuefei Fang, and Muyong Cao</center>
+<center>Tencent Technology, </center>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Abstract
 
-### Markdown
+<div style="text-align: justify"> The Kalman filter has been adopted in acoustic echo cancellation due to its robustness to double-talk, fast convergence, and tracking ability. The performance of Kalman filter is closely related to the accuracy of the state noise covariance and the observation noise covariance, which are either manually designed or estimated according to the echo cancellation results. The estimation error may lead to unacceptable results, especially when the echo path suffers abrupt changes, the tracking performance of the Kalman filter could be degraded significantly. In this paper, we propose the neural kalman filtering (NKF), which uses neural networks to implicitly model the covariance of the state noise and observation noise and to output the Kalman gain in real-time. Experimental results on both synthetic test sets and real-recorded test sets show that, the proposed NKF has superior convergence and re-convergence performance while ensuring low near-end speech degradation comparing with the state-of-the-art Kalman filters. Moreover, the proposed model size is merely 9.4 K and the RTF is as small as 0.1284, which indicates that the NKF can be deployed in low-resource platforms. </div> 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<!-- <br>
+<center><img src="images/diagram.png" width="600"></center>
+<br> -->
 
-```markdown
-Syntax highlighted code block
+## Audio Samples
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/fjiang9/NKF-AEC/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<!-- <div style="text-align: justify"> This mixture audio clip is from 'Zeno - Signs' in MUSDB18 test partition: </div> 
+<p style="margin-bottom : 6px;">
+</p>
+<center><audio controls="" preload="none">
+  <source src="demo/mixture-1.wav">
+</audio></center>
+<div style="text-align: justify"> Separated sources: </div> 
+<p style="margin-bottom : 6px;">
+</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Vocal</th>
+      <th>Bass</th>
+      <th>Drums</th>
+      <th>Other</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ground Truth</th>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/GT/vocals_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/GT/bass_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/GT/drums_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/GT/other_cut.wav"></audio></td>
+    </tr>
+    <tr>
+      <th>Open-Unmix</th>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/openunmix/1_vocals_22k_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/openunmix/1_bass_22k_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/openunmix/1_drums_22k_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/openunmix/1_other_22k_cut.wav"></audio></td>
+    </tr>
+    <tr>
+      <th>Demucs(v2)</th>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/demucs/vocals_22k_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/demucs/bass_22k_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/demucs/drums_22k_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/demucs/other_22k_cut.wav"></audio></td>
+    </tr>
+    <tr>
+      <th>Wave-U-Net</th>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/waveunet/mixture-1_vocals_22k_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/waveunet/mixture-1_bass_22k_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/waveunet/mixture-1_drums_22k_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/waveunet/mixture-1_other_22k_cut.wav"></audio></td>
+    </tr>
+    <tr>
+      <th>Tasnet</th>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/tasnet/vocals_22k_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/tasnet/bass_22k_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/tasnet/drums_22k_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/tasnet/other_22k_cut.wav"></audio></td>
+    </tr>
+    <tr>
+      <th>InstGlow (Ours)</th>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/instGlow/vocals_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/instGlow/bass_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/instGlow/drums_cut.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/instGlow/other_cut.wav"></audio></td>
+    </tr>
+  </tbody>
+</table>
+<br> -->
