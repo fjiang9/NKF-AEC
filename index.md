@@ -11,7 +11,10 @@
 <center><img src="images/diagram.png" width="600"></center>
 <br> -->
 
-## Results on the blind test set from the ICASSP 2021 AEC Challenge 
+## Samples from the ICASSP 2021 AEC Challenge Blind Test Set
+### Without echo path change
+
+### With echo path change
 
 <!-- <div style="text-align: justify"> This mixture audio clip is from 'Zeno - Signs' in MUSDB18 test partition: </div> 
 <p style="margin-bottom : 6px;">
