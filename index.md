@@ -1,8 +1,7 @@
 # <center>Low-Complexity Acoustic Echo Cancellation with Neural Kalman Filtering</center>
 
-<center>Dong Yang<sup>*</sup>, Fei Jiang<sup>*</sup>, Wei Wu, Xuefei Fang, and Muyong Cao</center>
+<center>Dong Yang<sup>*</sup>, Fei Jiang<sup>*</sup>, Wei Wu, Xuefei Fang, and Muyong Cao （<sup>*</sup>Equal contribution）</center>
 <center>Tencent Technology</center>
-<center><sup>*</sup>Equal contribution</center>
 
 ## Abstract
 
