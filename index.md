@@ -115,10 +115,8 @@
   </tbody>
 </table>
 <br>
+
 ### With echo path change
-<!-- <div style="text-align: justify"> Separated sources: </div> 
-<p style="margin-bottom : 6px;">
-</p> -->
 <table align="center" style="width:120%; font-size:80%">
   <thead>
     <tr>
