@@ -17,7 +17,7 @@
 <!-- <div style="text-align: justify"> Separated sources: </div> 
 <p style="margin-bottom : 6px;">
 </p> -->
-<table align="center" style="width:100%; font-size:80%">
+<table align="center" style="width:120%; font-size:60%">
   <thead>
     <tr>
       <th>Mic</th>
