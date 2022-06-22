@@ -13,7 +13,6 @@
 
 ## Samples from the ICASSP 2021 AEC Challenge Blind Test Set
 ### Without echo path change
-
 <!-- <div style="text-align: justify"> Separated sources: </div> 
 <p style="margin-bottom : 6px;">
 </p> -->
@@ -116,7 +115,108 @@
   </tbody>
 </table>
 <br>
-
 ### With echo path change
+<!-- <div style="text-align: justify"> Separated sources: </div> 
+<p style="margin-bottom : 6px;">
+</p> -->
+<table align="center" style="width:120%; font-size:80%">
+  <thead>
+    <tr>
+      <th>Mic</th>
+      <th>Ref</th>
+      <th>WebRTC-AEC3</th>
+      <th>PFDKF</th>
+      <th>TFDKF</th>
+      <th>NKF</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement.wav"></audio></td>
+    </tr>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement.wav"></audio></td>
+    </tr>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement.wav"></audio></td>
+    </tr>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement.wav"></audio></td>
+    </tr>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement.wav"></audio></td>
+    </tr>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QU5LTTDCuU2iDv4NBKf-wg_doubletalk_with_movement_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QU5LTTDCuU2iDv4NBKf-wg_doubletalk_with_movement_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/QU5LTTDCuU2iDv4NBKf-wg_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QU5LTTDCuU2iDv4NBKf-wg_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QU5LTTDCuU2iDv4NBKf-wg_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 120px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/QU5LTTDCuU2iDv4NBKf-wg_doubletalk_with_movement.wav"></audio></td>
+    </tr>
+  </tbody>
+</table>
+<br>
 
 
