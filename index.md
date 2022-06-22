@@ -17,100 +17,100 @@
 <!-- <div style="text-align: justify"> Separated sources: </div> 
 <p style="margin-bottom : 6px;">
 </p> -->
-<table align="center" style="width:100%">
+<table align="center" style="width:100%; font-size:80%">
   <thead>
     <tr>
-      <th>Mic</th>
-      <th>Ref</th>
-      <th>WebRTC-AEC3</th>
-      <th>PFDKF</th>
-      <th>TFDKF</th>
-      <th>NKF</th>
+      <th>Mic style="width:90%"</th>
+      <th>Ref style="width:90%"</th>
+      <th>WebRTC-AEC3 style="width:90%"</th>
+      <th>PFDKF style="width:90%"</th>
+      <th>TFDKF style="width:90%"</th>
+      <th>NKF style="width:90%"</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_mic.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_lpb.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/PFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/TFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/NKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
     </tr>
     <tr>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_mic.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_lpb.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/NKF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk.wav"></audio></td>
     </tr>
     <tr>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/test_wavs/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_mic.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/test_wavs/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_lpb.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/PFDKF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/TFDKF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/NKF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk.wav"></audio></td>
     </tr>
     <tr>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_mic.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_lpb.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/NKF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk.wav"></audio></td>
     </tr>
     <tr>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_mic.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_lpb.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/NKF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk.wav"></audio></td>
     </tr>
     <tr>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QU5LTTDCuU2iDv4NBKf-wg_doubletalk_mic.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QU5LTTDCuU2iDv4NBKf-wg_doubletalk_lpb.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/QU5LTTDCuU2iDv4NBKf-wg_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QU5LTTDCuU2iDv4NBKf-wg_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QU5LTTDCuU2iDv4NBKf-wg_doubletalk.wav"></audio></td>
-      <td><audio controls="" preload="none" style="width: 130px;">
+      <td><audio controls="" preload="none" style="width: 120px;">
             <source src="demo/NKF/blind_test_set_clean_doubletalk/QU5LTTDCuU2iDv4NBKf-wg_doubletalk.wav"></audio></td>
     </tr>
   </tbody>
