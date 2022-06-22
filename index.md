@@ -14,94 +14,109 @@
 ## Samples from the ICASSP 2021 AEC Challenge Blind Test Set
 ### Without echo path change
 
-### With echo path change
-
-<!-- <div style="text-align: justify"> This mixture audio clip is from 'Zeno - Signs' in MUSDB18 test partition: </div> 
+<!-- <div style="text-align: justify"> Separated sources: </div> 
 <p style="margin-bottom : 6px;">
-</p>
-<center><audio controls="" preload="none">
-  <source src="demo/mixture-1.wav">
-</audio></center>
-<div style="text-align: justify"> Separated sources: </div> 
-<p style="margin-bottom : 6px;">
-</p>
+</p> -->
 <table align="center">
   <thead>
     <tr>
-      <th> </th>
-      <th>Vocal</th>
-      <th>Bass</th>
-      <th>Drums</th>
-      <th>Other</th>
+      <th>Mic</th>
+      <th>Ref</th>
+      <th>WebRTC-AEC3</th>
+      <th>PFDKF</th>
+      <th>TFDKF</th>
+      <th>NKF</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>Ground Truth</th>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/GT/vocals_cut.wav"></audio></td>
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_mic.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/GT/bass_cut.wav"></audio></td>
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_lpb.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/GT/drums_cut.wav"></audio></td>
+            <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/GT/other_cut.wav"></audio></td>
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
     </tr>
     <tr>
-      <th>Open-Unmix</th>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/openunmix/1_vocals_22k_cut.wav"></audio></td>
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_mic.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/openunmix/1_bass_22k_cut.wav"></audio></td>
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_lpb.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/openunmix/1_drums_22k_cut.wav"></audio></td>
+            <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/openunmix/1_other_22k_cut.wav"></audio></td>
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
     </tr>
     <tr>
-      <th>Demucs(v2)</th>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/demucs/vocals_22k_cut.wav"></audio></td>
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_mic.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/demucs/bass_22k_cut.wav"></audio></td>
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_lpb.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/demucs/drums_22k_cut.wav"></audio></td>
+            <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/demucs/other_22k_cut.wav"></audio></td>
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
     </tr>
     <tr>
-      <th>Wave-U-Net</th>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/waveunet/mixture-1_vocals_22k_cut.wav"></audio></td>
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_mic.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/waveunet/mixture-1_bass_22k_cut.wav"></audio></td>
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_lpb.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/waveunet/mixture-1_drums_22k_cut.wav"></audio></td>
+            <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/waveunet/mixture-1_other_22k_cut.wav"></audio></td>
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
     </tr>
     <tr>
-      <th>Tasnet</th>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/tasnet/vocals_22k_cut.wav"></audio></td>
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_mic.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/tasnet/bass_22k_cut.wav"></audio></td>
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_lpb.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/tasnet/drums_22k_cut.wav"></audio></td>
+            <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/tasnet/other_22k_cut.wav"></audio></td>
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
     </tr>
     <tr>
-      <th>InstGlow (Ours)</th>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/instGlow/vocals_cut.wav"></audio></td>
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_mic.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/instGlow/bass_cut.wav"></audio></td>
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_lpb.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/instGlow/drums_cut.wav"></audio></td>
+            <source src="demo/WebRTC-AEC3/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 130px;">
-            <source src="demo/instGlow/other_cut.wav"></audio></td>
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 130px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
     </tr>
   </tbody>
 </table>
-<br> -->
+<br>
+
+### With echo path change
+
+
