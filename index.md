@@ -20,12 +20,12 @@
 <table align="center" style="width:100%; font-size:80%">
   <thead>
     <tr>
-      <th>Mic style="width:90%"</th>
-      <th>Ref style="width:90%"</th>
-      <th>WebRTC-AEC3 style="width:90%"</th>
-      <th>PFDKF style="width:90%"</th>
-      <th>TFDKF style="width:90%"</th>
-      <th>NKF style="width:90%"</th>
+      <th>Mic</th>
+      <th>Ref</th>
+      <th>WebRTC-AEC3</th>
+      <th>PFDKF</th>
+      <th>TFDKF</th>
+      <th>NKF</th>
     </tr>
   </thead>
   <tbody>
