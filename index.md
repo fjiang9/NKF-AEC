@@ -1,6 +1,6 @@
 # <center>Low-Complexity Acoustic Echo Cancellation with Neural Kalman Filtering</center>
 
-<center>Dong Yang<sup>*</sup>, Fei Jiang<sup>*</sup>, Wei Wu, Xuefei Fang, and Muyong Cao （<sup>*</sup>Equal contribution）</center>
+<center>Dong Yang<sup>*</sup>, Fei Jiang<sup>*</sup>, Wei Wu, Xuefei Fang, and Muyong Cao (<sup>*</sup>Equal contribution)</center>
 <center>Tencent Technology</center>
 
 ## Abstract
@@ -24,7 +24,7 @@
       <th>WebRTC-AEC3</th>
       <th>PFDKF</th>
       <th>TFDKF</th>
-      <th>NKF</th>
+      <th>NKF (proposed)</th>
     </tr>
   </thead>
   <tbody>
@@ -125,7 +125,7 @@
       <th>WebRTC-AEC3</th>
       <th>PFDKF</th>
       <th>TFDKF</th>
-      <th>NKF</th>
+      <th>NKF (proposed)</th>
     </tr>
   </thead>
   <tbody>
