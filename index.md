@@ -12,10 +12,10 @@
 ### Synthetic Test Set
 <center><img src="figures/fig_erle.png" width="1200"></center>
 <center> (Averaged ERLE curves of the synthetic double-talk test set. Abrupt echo path change occurs at the shaded region. )</center>
-<br>
 <center><img src="figures/fig_spec.png" width="1200"></center>
 <center> (Mel spectrograms of the first test sample below.)</center>
 
+#### Double-talk with abrupt echo path change
 <table align="center" style="width:130%; font-size:80%">
   <thead>
     <tr>
@@ -122,7 +122,6 @@
     </tr>
   </tbody>
 </table>
-<br>
 
 
 ### Blind Test Set of ICASSP 2021 AEC Challenge
@@ -236,7 +235,6 @@
     </tr>
   </tbody>
 </table>
-<br>
 
 #### With echo path change
 <table align="center" style="width:130%; font-size:80%">
@@ -345,6 +343,5 @@
     </tr>
   </tbody>
 </table>
-<br>
 
 
