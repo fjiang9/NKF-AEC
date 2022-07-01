@@ -70,7 +70,7 @@
       <td><audio controls="" preload="none" style="width: 100px;">
             <source src="demo/NKF/syn_test_dt_epc/test299_-4.37dB_epc4.25s__mic.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 100px;">
-            <source src="demo/NKF/syn_test_dt_epc/test299_-4.37dB_epc4.25s.wav"></audio></td>
+            <source src="demo/NKF/syn_test_dt_epc/test299_-4.37dB_epc4.25s__gt.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 100px;">
             <source src="demo/PNLMS/syn_test_dt_epc/test299_-4.37dB_epc4.25s.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 100px;">
@@ -104,7 +104,7 @@
     </tr>
     <tr>
       <td><audio controls="" preload="none" style="width: 100px;">
-            <source src="demo/NKF/syn_test_dt_epc/test499_-4.47dB_epc4.31s.wav"></audio></td>
+            <source src="demo/NKF/syn_test_dt_epc/test499_-4.47dB_epc4.31s__mic.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 100px;">
             <source src="demo/NKF/syn_test_dt_epc/test499_-4.47dB_epc4.31s__gt.wav"></audio></td>
       <td><audio controls="" preload="none" style="width: 100px;">
