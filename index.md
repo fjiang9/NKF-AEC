@@ -13,6 +13,10 @@
 <center><img src="figures/fig_erle.png" width="600"></center>
 <br>
 
+<br>
+<center><img src="figures/fig_spec.png" width="1000"></center>
+<br>
+
 
 ### Blind Test Set of ICASSP 2021 AEC Challenge
 #### Without echo path change
