@@ -16,9 +16,7 @@
 <br>
 <center><img src="figures/fig_spec.png" width="1200"></center>
 <br>
-<!-- <div style="text-align: justify"> Separated sources: </div> 
-<p style="margin-bottom : 6px;">
-</p> -->
+
 <table align="center" style="width:130%; font-size:80%">
   <thead>
     <tr>
