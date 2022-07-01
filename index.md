@@ -1,21 +1,20 @@
 # <center>Low-Complexity Acoustic Echo Cancellation with Neural Kalman Filtering</center>
 
-<center>Dong Yang<sup>*</sup>, Fei Jiang<sup>*</sup>, Wei Wu, Xuefei Fang, and Muyong Cao (<sup>*</sup>Equal contribution)</center>
+<center>Dong Yang<sup>*</sup>, Fei Jiang<sup>*</sup>, Wei Wu, Xuefei Fang, and Muyong Cao</center>
 <center>Tencent Technology</center>
+<center> (<sup>*</sup>Equal contribution)</center>
 
 ## Abstract
 
-<div style="text-align: justify"> The Kalman filter has been adopted in acoustic echo cancellation due to its robustness to double-talk, fast convergence, and tracking ability. The performance of Kalman filter is closely related to the accuracy of the state noise covariance and the observation noise covariance, which are either manually designed or estimated according to the echo cancellation results. The estimation error may lead to unacceptable results, especially when the echo path suffers abrupt changes, the tracking performance of the Kalman filter could be degraded significantly. In this paper, we propose the neural kalman filtering (NKF), which uses neural networks to implicitly model the covariance of the state noise and observation noise and to output the Kalman gain in real-time. Experimental results on both synthetic test sets and real-recorded test sets show that, the proposed NKF has superior convergence and re-convergence performance while ensuring low near-end speech degradation comparing with the state-of-the-art Kalman filters. Moreover, the proposed model size is merely 9.4 K and the RTF is as low as 0.1284, which indicates that the NKF can be deployed in low-resource platforms. </div> 
+<div style="text-align: justify; width: 130%"> The Kalman filter has been adopted in acoustic echo cancellation due to its robustness to double-talk, fast convergence, and tracking ability. The performance of Kalman filter is closely related to the accuracy of the state noise covariance and the observation noise covariance, which are either manually designed or estimated according to the echo cancellation results. The estimation error may lead to unacceptable results, especially when the echo path suffers abrupt changes, the tracking performance of the Kalman filter could be degraded significantly. In this paper, we propose the neural kalman filtering (NKF), which uses neural networks to implicitly model the covariance of the state noise and observation noise and to output the Kalman gain in real-time. Experimental results on both synthetic test sets and real-recorded test sets show that, the proposed NKF has superior convergence and re-convergence performance while ensuring low near-end speech degradation comparing with the state-of-the-art Kalman filters. Moreover, the proposed model size is merely 9.4 K and the RTF is as low as 0.1284, which indicates that the NKF can be deployed in low-resource platforms. </div> 
 
 ## Results
 ### Synthetic Test Set
-<br>
 <center><img src="figures/fig_erle.png" width="1200"></center>
-<br>
-
+<center> (Averaged ERLE curves of the synthetic double-talk test set. Abrupt echo path change occurs at the shaded region. )</center>
 <br>
 <center><img src="figures/fig_spec.png" width="1200"></center>
-<br>
+<center> (Mel spectrograms of the first test sample below.)</center>
 
 <table align="center" style="width:130%; font-size:80%">
   <thead>
