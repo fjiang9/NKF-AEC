@@ -13,7 +13,7 @@
 <center><img src="figures/fig_erle.png" width="1200"></center>
 <center> (Averaged ERLE curves of the synthetic double-talk test set. Abrupt echo path change occurs at the shaded region. RNN-AEC refers to the baseline model of Interspeech 2021 AEC challenge.)</center>
 <center><img src="figures/fig_spec.png" width="1200"></center>
-<center> (Mel spectrograms of the first test sample below.)</center>
+<center> (Mel spectrograms of the first test sample below. Abrupt echo path change occurs at 4.2 s.)</center>
 
 #### Double-talk with abrupt echo path change
 <table align="center" style="width:130%; font-size:80%">
