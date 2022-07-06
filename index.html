@@ -159,70 +159,222 @@
 </table>
 
 
-<!--<h2>Results on the ICASSP 2021 blind test set<a name="blind_test_set"></a></h2>-->
-<!--<table>-->
-<!--  <thead>-->
-<!--    <tr>-->
-<!--      <th style="text-align: center"><strong>Models</strong></th>-->
-<!--      <th style="text-align: center"><strong>Sample 1</strong></th>-->
-<!--      <th style="text-align: center"><strong>Sample 2</strong></th>-->
-<!--      <th style="text-align: center"><strong>Sample 3</strong></th>-->
-<!--      <th style="text-align: center"><strong>Sample 4</strong></th>-->
-<!--    </tr>-->
-<!--  </thead>-->
-<!--  <tbody>-->
-<!--    <tr>-->
-<!--      <td style="text-align: left">Microphone</td>-->
-<!--      <td style="text-align: left"><audio src="exp/input/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/input/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/input/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/input/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td style="text-align: left">GCCRN</td>-->
-<!--      <td style="text-align: left"><audio src="exp/gccrn/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gccrn/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gccrn/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gccrn/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td style="text-align: left">DTLN</td>-->
-<!--      <td style="text-align: left"><audio src="exp/dtln/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/dtln/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/dtln/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/dtln/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td style="text-align: left">GTCNN-E_<sub>s</sub></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnes/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnes/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnes/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnes/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td style="text-align: left">GTCNN-E_<sub>x</sub></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnex/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnex/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnex/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnex/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td style="text-align: left">GTCNN-E_<sub>mix</sub></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnemix/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnemix/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnemix/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnemix/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td style="text-align: left">GTCNN-L</sub></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnl/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnl/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnl/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/gtcnnl/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
-<!--    </tr>-->
-<!--  </tbody>-->
-<!--</table>-->
-<!--<br><br>-->
+<h2>Results on the ICASSP 2021 blind test set<a name="blind_test_set"></a></h2>
+<h3> Double-talk without echo path change</h3>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Mic</th>
+      <th style="text-align: center">Ref</th>
+      <th style="text-align: center">PNLMS</th>
+      <th style="text-align: center">PFDKF</th>
+      <th style="text-align: center">TFDKF</th>
+      <th style="text-align: center">RNN-AEC</th>
+      <th style="text-align: center">Meta-AF</th>
+      <th style="text-align: center">NKF (proposed)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PNLMS/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/RNN-AEC/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/Meta-AF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>      
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk.wav"></audio></td>
+    </tr>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PNLMS/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/RNN-AEC/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/Meta-AF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk.wav"></audio></td>  
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk.wav"></audio></td>
+    </tr>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PNLMS/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/RNN-AEC/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/Meta-AF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk.wav"></audio></td>  
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk.wav"></audio></td>
+    </tr>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PNLMS/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/RNN-AEC/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/Meta-AF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk.wav"></audio></td> 
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk.wav"></audio></td>
+    </tr>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PNLMS/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/RNN-AEC/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/Meta-AF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk.wav"></audio></td> 
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk.wav"></audio></td>
+    </tr>
+  </tbody>
+</table>
+<h3> Double-talk with echo path change</h3>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Mic</th>
+      <th style="text-align: center">Ref</th>
+      <th style="text-align: center">PNLMS</th>
+      <th style="text-align: center">PFDKF</th>
+      <th style="text-align: center">TFDKF</th>
+      <th style="text-align: center">RNN-AEC</th>
+      <th style="text-align: center">Meta-AF</th>
+      <th style="text-align: center">NKF (proposed)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PNLMS/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/RNN-AEC/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/Meta-AF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement.wav"></audio></td>      
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/q2x99Trf80SQ4ZJo9I01_A_doubletalk_with_movement.wav"></audio></td>
+    </tr>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PNLMS/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/RNN-AEC/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/Meta-AF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement.wav"></audio></td>  
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/QG4-PpzI-EmU-Qzb-7pSow_doubletalk_with_movement.wav"></audio></td>
+    </tr>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PNLMS/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/RNN-AEC/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/Meta-AF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement.wav"></audio></td>  
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/qJuAkf-g00CNrazjR6-JIg_doubletalk_with_movement.wav"></audio></td>
+    </tr>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PNLMS/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/RNN-AEC/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/Meta-AF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement.wav"></audio></td> 
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/QLaGxunnbUKP8t_ZHZAG4w_doubletalk_with_movement.wav"></audio></td>
+    </tr>
+    <tr>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement_mic.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/test_wavs/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement_lpb.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PNLMS/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/PFDKF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/TFDKF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/RNN-AEC/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement.wav"></audio></td>
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/Meta-AF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement.wav"></audio></td> 
+      <td><audio controls="" preload="none" style="width: 160px;">
+            <source src="demo/NKF/blind_test_set_clean_doubletalk/QtLE7-zrVkmlqiDjKli0kQ_doubletalk_with_movement.wav"></audio></td>
+    </tr>
+  </tbody>
+</table>
+<br><br>
 
 
       <footer class="site-footer">
