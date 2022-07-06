@@ -35,7 +35,7 @@
   <li><a href="https://fjiang9.github.io/NKF-AEC/#blind_test_set">ICASSP 2021 AEC challenge blind test set results</a></li>
 </ol>
 
-<br><br>
+<br>
 <h2 id="abstract">1. Abstract<a name="abstract"></a></h2>
 <p>
   The Kalman filter has been adopted in acoustic echo cancellation due to its robustness to double-talk, fast convergence, and tracking ability. The performance of Kalman filter is closely related to the accuracy of the state noise covariance and the observation noise covariance, which are either manually designed or estimated according to the echo cancellation results. The estimation error may lead to unacceptable results, especially when the echo path suffers abrupt changes, the tracking performance of the Kalman filter could be degraded significantly. In this paper, we propose the neural kalman filtering (NKF), which uses neural networks to implicitly model the covariance of the state noise and observation noise and to output the Kalman gain in real-time. Experimental results on both synthetic test sets and real-recorded test sets show that, the proposed NKF has superior convergence and re-convergence performance while ensuring low near-end speech degradation comparing with the state-of-the-art Kalman filters. Moreover, the proposed model size is merely 5.3 K and the RTF is as low as 0.09, which indicates that the NKF can be deployed in low-resource platforms.
@@ -157,7 +157,7 @@
     </tr>
   </tbody>
 </table>
-
+<br>
 
 <h2>Results on the ICASSP 2021 blind test set<a name="blind_test_set"></a></h2>
 <h3> Double-talk without echo path change</h3>
