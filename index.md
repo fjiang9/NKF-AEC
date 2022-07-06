@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Personalized Acoustic Echo Cancellation for Full-duplex Communications</title>
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="TODO: title">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://echocatzh.github.io/GTCNN/">
+<meta property="og:url" content="https://echocatzh.github.io/GTCNN/">
+<meta name="twitter:card" content="summary">
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="./GTCNN_files/style.css">
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
+    <section class="page-header">
+      
+    </section>
 # <center>Low-Complexity Acoustic Echo Cancellation with Neural Kalman Filtering</center>
 
 <center>Dong Yang<sup>*</sup>, Fei Jiang<sup>*</sup>, Wei Wu, Xuefei Fang, and Muyong Cao</center>
@@ -16,7 +37,7 @@
 <center> (Mel spectrograms of the first test sample below. Abrupt echo path change occurs at 4.2 s.)</center>
 
 #### Double-talk with abrupt echo path change
-<table align="center" style="width:130%; font-size:80%">
+<table align="center" style="width:100%; font-size:80%">
   <thead>
     <tr>
       <th style="width:100px">Mic</th>
@@ -129,7 +150,7 @@
 <!-- <div style="text-align: justify"> Separated sources: </div> 
 <p style="margin-bottom : 6px;">
 </p> -->
-<table align="center" style="width:130%; font-size:80%">
+<table align="center" style="width:100%; font-size:80%">
   <thead>
     <tr>
       <th>Mic</th>
@@ -237,7 +258,7 @@
 </table>
 
 #### With echo path change
-<table align="center" style="width:130%; font-size:80%">
+<table align="center" style="width:100%; font-size:80%">
   <thead>
     <tr>
       <th>Mic</th>
@@ -343,5 +364,9 @@
     </tr>
   </tbody>
 </table>
+
+ </section>
+
+</body></html>
 
 
