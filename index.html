@@ -21,11 +21,11 @@
     </section>
 
 <section class="main-content">
-      <h1 id=""><center>Personalized Acoustic Echo Cancellation for Full-duplex Communications
+      <h1 id=""><center>Low-Complexity Acoustic Echo Cancellation with Neural Kalman Filtering
 	  </center></h1>
 
 <center> Dong Yang<sup>*</sup>, Fei Jiang<sup>*</sup>, Wei Wu, Xuefei Fang, and Muyong Cao</center>
-<center> Tencent Technology</center>
+<center> The GVoice Team @ Tencent Technology</center>
 <center> <sup>*</sup>Equal contribution</center>
 
 <h2>0. Contents</h2>
@@ -36,60 +36,129 @@
 </ol>
 
 <br><br>
-<h2 id="abstract">1. Abstract<a name="abstract"></a></h2>
+<h2 id="abstract">Abstract<a name="abstract"></a></h2>
 <p>
   The Kalman filter has been adopted in acoustic echo cancellation due to its robustness to double-talk, fast convergence, and tracking ability. The performance of Kalman filter is closely related to the accuracy of the state noise covariance and the observation noise covariance, which are either manually designed or estimated according to the echo cancellation results. The estimation error may lead to unacceptable results, especially when the echo path suffers abrupt changes, the tracking performance of the Kalman filter could be degraded significantly. In this paper, we propose the neural kalman filtering (NKF), which uses neural networks to implicitly model the covariance of the state noise and observation noise and to output the Kalman gain in real-time. Experimental results on both synthetic test sets and real-recorded test sets show that, the proposed NKF has superior convergence and re-convergence performance while ensuring low near-end speech degradation comparing with the state-of-the-art Kalman filters. Moreover, the proposed model size is merely 5.3 K and the RTF is as low as 0.09, which indicates that the NKF can be deployed in low-resource platforms.
   <br>
 
 
-<!--<h2>2. The corresponding reference, enrolled speech and label<a name="syn_test_set"></a></h2>-->
+<h2>Results on the synthetic test set<a name="syn_test_set"></a></h2>
 
-<!--<table>-->
-<!--  <thead>-->
-<!--    <tr>-->
-<!--      <th style="text-align: center"><strong>-</strong></th>-->
-<!--      <th style="text-align: center"><strong>Sample 1</strong></th>-->
-<!--      <th style="text-align: center"><strong>Sample 2</strong></th>-->
-<!--      <th style="text-align: center"><strong>Sample 3</strong></th>-->
-<!--      <th style="text-align: center"><strong>Sample 4</strong></th>-->
-<!--    </tr>-->
-<!--  </thead>-->
-<!--  <tbody>-->
-<!--    <tr>-->
-<!--      <td style="text-align: left">Label</td>-->
-<!--      <td style="text-align: left"><audio src="exp/label/p227_021.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/label/p228_008.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/label/p243_035.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/label/p282_024.wav" controls="" preload=""></audio></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td style="text-align: left">Reference</td>-->
-<!--      <td style="text-align: left"><audio src="exp/reference/p227_021.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/reference/p228_008.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/reference/p243_035.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/reference/p282_024.wav" controls="" preload=""></audio></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td style="text-align: left">Near-end enrolled</td>-->
-<!--      <td style="text-align: left"><audio src="exp/enrollment/p227_021.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/enrollment/p228_008.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/enrollment/p243_035.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/enrollment/p282_024.wav" controls="" preload=""></audio></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td style="text-align: left">Far-end enrolled</sub></td>-->
-<!--      <td style="text-align: left"><audio src="exp/enrollment_ref/p227_021.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/enrollment_ref/p228_008.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/enrollment_ref/p243_035.wav" controls="" preload=""></audio></td>-->
-<!--      <td style="text-align: left"><audio src="exp/enrollment_ref/p282_024.wav" controls="" preload=""></audio></td>-->
-<!--    </tr>-->
+<center><img src="figures/fig_erle.png" width="1200"></center>
+<center> (Averaged ERLE curves of the synthetic double-talk test set. Abrupt echo path change occurs at the shaded region. RNN-AEC refers to the baseline model of Interspeech 2021 AEC challenge.)</center>
+<center><img src="figures/fig_spec.png" width="1200"></center>
+<center> (Mel spectrograms of the first test sample below. Abrupt echo path change occurs at 4.2 s.)</center>
 
-<!--  </tbody>-->
-<!--</table>-->
-<!--<br><br>-->
+#### Double-talk with abrupt echo path change
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Mic</th>
+      <th style="text-align: center">GT</th>
+      <th style="text-align: center">PNLMS</th>
+      <th style="text-align: center">PFDKF</th>
+      <th style="text-align: center">TFDKF</th>
+      <th style="text-align: center">RNN-AEC</th>
+      <th style="text-align: center">Meta-AF</th>
+      <th style="text-align: center">NKF (proposed)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test99_-1.05dB_epc4.21s__mic.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test99_-1.05dB_epc4.21s__gt.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/PNLMS/syn_test_dt_epc/test99_-1.05dB_epc4.21s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/PFDKF/syn_test_dt_epc/test99_-1.05dB_epc4.21s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/TFDKF/syn_test_dt_epc/test99_-1.05dB_epc4.21s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/RNN-AEC/syn_test_dt_epc/test99_-1.05dB_epc4.21s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/Meta-AF/syn_test_dt_epc/test99_-1.05dB_epc4.21s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test99_-1.05dB_epc4.21s.wav"></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test199_-0.67dB_epc3.51s__mic.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test199_-0.67dB_epc3.51s__gt.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/PNLMS/syn_test_dt_epc/test199_-0.67dB_epc3.51s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/PFDKF/syn_test_dt_epc/test199_-0.67dB_epc3.51s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/TFDKF/syn_test_dt_epc/test199_-0.67dB_epc3.51s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/RNN-AEC/syn_test_dt_epc/test199_-0.67dB_epc3.51s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/Meta-AF/syn_test_dt_epc/test199_-0.67dB_epc3.51s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test199_-0.67dB_epc3.51s.wav"></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test299_-4.37dB_epc4.25s__mic.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test299_-4.37dB_epc4.25s__gt.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/PNLMS/syn_test_dt_epc/test299_-4.37dB_epc4.25s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/PFDKF/syn_test_dt_epc/test299_-4.37dB_epc4.25s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/TFDKF/syn_test_dt_epc/test299_-4.37dB_epc4.25s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/RNN-AEC/syn_test_dt_epc/test299_-4.37dB_epc4.25s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/Meta-AF/syn_test_dt_epc/test299_-4.37dB_epc4.25s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test299_-4.37dB_epc4.25s.wav"></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test399_8.36dB_epc4.15s__mic.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test399_8.36dB_epc4.15s__gt.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/PNLMS/syn_test_dt_epc/test399_8.36dB_epc4.15s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/PFDKF/syn_test_dt_epc/test399_8.36dB_epc4.15s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/TFDKF/syn_test_dt_epc/test399_8.36dB_epc4.15s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/RNN-AEC/syn_test_dt_epc/test399_8.36dB_epc4.15s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/Meta-AF/syn_test_dt_epc/test399_8.36dB_epc4.15s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test399_8.36dB_epc4.15s.wav"></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test499_-4.47dB_epc4.31s__mic.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test499_-4.47dB_epc4.31s__gt.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/PNLMS/syn_test_dt_epc/test499_-4.47dB_epc4.31s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/PFDKF/syn_test_dt_epc/test499_-4.47dB_epc4.31s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/TFDKF/syn_test_dt_epc/test499_-4.47dB_epc4.31s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/RNN-AEC/syn_test_dt_epc/test499_-4.47dB_epc4.31s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/Meta-AF/syn_test_dt_epc/test499_-4.47dB_epc4.31s.wav"></audio></td>
+      <td style="text-align: left"><audio controls="" preload="none">
+            <source src="demo/NKF/syn_test_dt_epc/test499_-4.47dB_epc4.31s.wav"></audio></td>
+    </tr>
+  </tbody>
+</table>
 
 
-<!--<h2>3. SER=5 dB, SIR=5 dB, trained with D3<a name="blind_test_set"></a></h2>-->
+<!--<h2>Results on the ICASSP 2021 blind test set<a name="blind_test_set"></a></h2>-->
 <!--<table>-->
 <!--  <thead>-->
 <!--    <tr>-->
