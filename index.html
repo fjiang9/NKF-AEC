@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Low-Complexity Acoustic Echo Cancellation with Neural Kalman Filtering</title>
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="TODO: title">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://fjiang9.github.io/NKF-AEC/">
+<meta property="og:url" content="https://fjiang9.github.io/NKF-AEC/">
+<meta name="twitter:card" content="summary">
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="./assets/style.css">
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
+    <section class="page-header">
+
+    </section>
+
+<section class="main-content">
+      <h1 id=""><center>Personalized Acoustic Echo Cancellation for Full-duplex Communications
+	  </center></h1>
+
+<center> Dong Yang<sup>*</sup>, Fei Jiang<sup>*</sup>, Wei Wu, Xuefei Fang, and Muyong Cao</center>
+<center> Tencent Technology</center>
+<center> <sup>*</sup>Equal contribution</center>
+
+<h2>0. Contents</h2>
+<ol>
+  <li><a href="https://fjiang9.github.io/NKF-AEC/#abstract">Abstract</a></li>
+  <li><a href="https://fjiang9.github.io/NKF-AEC/#syn_test_set">Synthetics test set results</a></li>
+  <li><a href="https://fjiang9.github.io/NKF-AEC/#blind_test_set">ICASSP 2021 AEC challenge blind test set results</a></li>
+</ol>
+
+<br><br>
+<h2 id="abstract">1. Abstract<a name="abstract"></a></h2>
+<p>
+  The Kalman filter has been adopted in acoustic echo cancellation due to its robustness to double-talk, fast convergence, and tracking ability. The performance of Kalman filter is closely related to the accuracy of the state noise covariance and the observation noise covariance, which are either manually designed or estimated according to the echo cancellation results. The estimation error may lead to unacceptable results, especially when the echo path suffers abrupt changes, the tracking performance of the Kalman filter could be degraded significantly. In this paper, we propose the neural kalman filtering (NKF), which uses neural networks to implicitly model the covariance of the state noise and observation noise and to output the Kalman gain in real-time. Experimental results on both synthetic test sets and real-recorded test sets show that, the proposed NKF has superior convergence and re-convergence performance while ensuring low near-end speech degradation comparing with the state-of-the-art Kalman filters. Moreover, the proposed model size is merely 5.3 K and the RTF is as low as 0.09, which indicates that the NKF can be deployed in low-resource platforms.
+  <br>
+
+
+<!--<h2>2. The corresponding reference, enrolled speech and label<a name="syn_test_set"></a></h2>-->
+
+<!--<table>-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th style="text-align: center"><strong>-</strong></th>-->
+<!--      <th style="text-align: center"><strong>Sample 1</strong></th>-->
+<!--      <th style="text-align: center"><strong>Sample 2</strong></th>-->
+<!--      <th style="text-align: center"><strong>Sample 3</strong></th>-->
+<!--      <th style="text-align: center"><strong>Sample 4</strong></th>-->
+<!--    </tr>-->
+<!--  </thead>-->
+<!--  <tbody>-->
+<!--    <tr>-->
+<!--      <td style="text-align: left">Label</td>-->
+<!--      <td style="text-align: left"><audio src="exp/label/p227_021.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/label/p228_008.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/label/p243_035.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/label/p282_024.wav" controls="" preload=""></audio></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td style="text-align: left">Reference</td>-->
+<!--      <td style="text-align: left"><audio src="exp/reference/p227_021.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/reference/p228_008.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/reference/p243_035.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/reference/p282_024.wav" controls="" preload=""></audio></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td style="text-align: left">Near-end enrolled</td>-->
+<!--      <td style="text-align: left"><audio src="exp/enrollment/p227_021.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/enrollment/p228_008.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/enrollment/p243_035.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/enrollment/p282_024.wav" controls="" preload=""></audio></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td style="text-align: left">Far-end enrolled</sub></td>-->
+<!--      <td style="text-align: left"><audio src="exp/enrollment_ref/p227_021.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/enrollment_ref/p228_008.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/enrollment_ref/p243_035.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/enrollment_ref/p282_024.wav" controls="" preload=""></audio></td>-->
+<!--    </tr>-->
+
+<!--  </tbody>-->
+<!--</table>-->
+<!--<br><br>-->
+
+
+<!--<h2>3. SER=5 dB, SIR=5 dB, trained with D3<a name="blind_test_set"></a></h2>-->
+<!--<table>-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th style="text-align: center"><strong>Models</strong></th>-->
+<!--      <th style="text-align: center"><strong>Sample 1</strong></th>-->
+<!--      <th style="text-align: center"><strong>Sample 2</strong></th>-->
+<!--      <th style="text-align: center"><strong>Sample 3</strong></th>-->
+<!--      <th style="text-align: center"><strong>Sample 4</strong></th>-->
+<!--    </tr>-->
+<!--  </thead>-->
+<!--  <tbody>-->
+<!--    <tr>-->
+<!--      <td style="text-align: left">Microphone</td>-->
+<!--      <td style="text-align: left"><audio src="exp/input/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/input/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/input/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/input/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td style="text-align: left">GCCRN</td>-->
+<!--      <td style="text-align: left"><audio src="exp/gccrn/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gccrn/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gccrn/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gccrn/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td style="text-align: left">DTLN</td>-->
+<!--      <td style="text-align: left"><audio src="exp/dtln/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/dtln/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/dtln/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/dtln/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td style="text-align: left">GTCNN-E_<sub>s</sub></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnes/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnes/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnes/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnes/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td style="text-align: left">GTCNN-E_<sub>x</sub></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnex/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnex/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnex/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnex/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td style="text-align: left">GTCNN-E_<sub>mix</sub></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnemix/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnemix/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnemix/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnemix/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td style="text-align: left">GTCNN-L</sub></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnl/ser5_sir5/p227_021.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnl/ser5_sir5/p228_008.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnl/ser5_sir5/p243_035.wav" controls="" preload=""></audio></td>-->
+<!--      <td style="text-align: left"><audio src="exp/gtcnnl/ser5_sir5/p282_024.wav" controls="" preload=""></audio></td>-->
+<!--    </tr>-->
+<!--  </tbody>-->
+<!--</table>-->
+<!--<br><br>-->
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com/">GitHub Pages</a>.</span>
+      </footer>
+    </section>
+
+</body></html>
