@@ -2,7 +2,7 @@
 This is the official repository of our work [Low-Complexity Acoustic Echo Cancellation with Neural Kalman Filtering](https://arxiv.org/abs/2207.11388). \
 See our [Demo website](https://fjiang9.github.io/NKF-AEC/).
 ## AEC Inference with the pre-trained model
-The inference code and pre-trained model of NKF-AEC is released in the _src_ folder. Try NKF-AEC by running:
+The inference code and pre-trained model of NKF-AEC is released in the [_src_](https://github.com/fjiang9/NKF-AEC/tree/gh-pages/src) folder. Try NKF-AEC by running:
 ```
 python nkf.py -x ref.wav -y mic.wav -o res.wav
 ```
