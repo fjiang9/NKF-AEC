@@ -8,7 +8,7 @@ python nkf.py -x ref.wav -y mic.wav -o res.wav
 ```
 Note: 
 - NKF-AEC is a linear acoustic echo canceller.
-- Time delay compensation (TDC) is necessary before running NKF if the time delay is significant (e.g., the ICASSP 2021 AEC challenge blind test set), which can be done by the [GCC-PHAT algorithm](https://ieeexplore.ieee.org/document/1162830), the [audio fingerprinting technology](https://ieeexplore.ieee.org/document/6909020), or the *WebRtcAecm_AlignedFarend* function in [WebRTC](https://webrtc.googlesource.com/src//+/eea928836755bd37dbe8ef058ca4856422d90eec/modules/audio_processing/aecm/aecm_core.h?autodive=0%2F%2F%2F%2F). In such scenarios, just add the __-a__ argument to the above command.
+- Time delay compensation (TDC) is necessary before running NKF if the time delay is significant (e.g., the ICASSP 2021 AEC challenge blind test set), which can be done by the [GCC-PHAT algorithm](https://ieeexplore.ieee.org/document/1162830), the [audio fingerprinting technology](https://ieeexplore.ieee.org/document/6309461), or the *WebRtcAecm_AlignedFarend* function in [WebRTC](https://webrtc.googlesource.com/src//+/eea928836755bd37dbe8ef058ca4856422d90eec/modules/audio_processing/aecm/aecm_core.h?autodive=0%2F%2F%2F%2F). In such scenarios, just add the __-a__ argument to the above command.
 - The training data of the pre-trained model are derived from a small part of the AEC challenge corpus, which is introduced in the paper.
 - The sampling rate of the audio is supposed to be 16 kHz.
 ## Cite our work
